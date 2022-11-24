@@ -2,13 +2,13 @@ import React from 'react';
 
 interface Props {
   name: string;
+  onCountryClick?: React.MouseEventHandler;
 }
 
-const CountryName: React.FC<Props> = ({name}) => {
-
+const CountryName: React.FC<Props> = ({name, onCountryClick}) => {
   return (
     <>
-      <p>{name}</p>
+      <p className="CountryApp" onClick={onCountryClick}>{name}</p>
     </>
   );
 };

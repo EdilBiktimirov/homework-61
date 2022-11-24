@@ -4,10 +4,10 @@ export interface Country {
   independent: boolean;
 }
 
-export interface CountryInfo {
+export interface CountryInf {
   name: string;
   population: number;
   region: string;
-  area: string;
+  area: number;
   borders: string [];
 }
