@@ -1,4 +1,10 @@
 .CountryApp {
     display: flex;
+}
 
+.Countries {
+    max-height: 700px;
+    overflow: auto;
+    border: 1px solid darkgrey;
+    box-shadow: 1px 0 5px rgb(0, 0, 0, 0.5), -1px 0 5px rgb(0, 0, 0, 0.5);
 }

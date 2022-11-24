@@ -9,5 +9,6 @@ export interface CountryInf {
   population: number;
   region: string;
   area: number;
+  flag: string;
   borders: string [];
 }

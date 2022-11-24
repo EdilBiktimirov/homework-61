@@ -16,6 +16,7 @@ const CountryApp = () => {
     population: 0,
     region: '',
     area: 0,
+    flag: '',
     borders: []
   });
 
@@ -27,7 +28,7 @@ const CountryApp = () => {
     response.data.map((elem) => {
       return setCountries((prev) => ([...prev, elem]));
     })
-  }, [])
+  }, []);
 
   useEffect(() => {
     getData().catch(console.error);
@@ -47,6 +48,7 @@ const CountryApp = () => {
         population: response.data.population,
         region: response.data.region,
         area: response.data.area,
+        flag: response.data.flag,
         borders: response.data.borders,
       }));
 
@@ -62,7 +64,7 @@ const CountryApp = () => {
     }
   }, [borders]);
 
-  let countryDescription = <div>Choose country</div>;
+  let countryDescription = <div className="CountryInfo">Choose country</div>;
 
   if (country.name !== '') {
     countryDescription = (
@@ -71,10 +73,9 @@ const CountryApp = () => {
         area={country.area}
         region={country.region}
         population={country.population}
+        url={country.flag}
         key={Math.random()}>
         {borders.map((elem) => {
-          console.log('here borders')
-          console.log(borders);
           return <CountryName name={elem} key={Math.random()}/>
         })}
       </CountryInfo>

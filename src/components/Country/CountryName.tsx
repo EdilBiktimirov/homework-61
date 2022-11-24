@@ -1,4 +1,5 @@
 import React from 'react';
+import './CountryName.css';
 
 interface Props {
   name: string;
@@ -8,7 +9,7 @@ interface Props {
 const CountryName: React.FC<Props> = ({name, onCountryClick}) => {
   return (
     <>
-      <p className="CountryApp" onClick={onCountryClick}>{name}</p>
+      <p className="CountryName" onClick={onCountryClick}>{name}</p>
     </>
   );
 };

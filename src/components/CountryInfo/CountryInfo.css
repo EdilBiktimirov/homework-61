@@ -1,0 +1,17 @@
+.CountryInfo {
+    flex-grow: 1;
+    text-align: center;
+    border: 1px solid darkgrey;
+    border-radius: 10px;
+    box-shadow: 1px 0 5px rgb(0, 0, 0, 0.5), -1px 0 5px rgb(0, 0, 0, 0.5);
+    margin-left: 10px;
+    padding: 5px;
+}
+
+.CountryInfo img {
+    max-width: 300px;
+    height: auto;
+    display: block;
+    margin: auto;
+    border: 1px solid black;
+}
